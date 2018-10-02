@@ -8,49 +8,51 @@ date: 15 de Outubro
 
 # Navigation Commands
 
----
+----
 
-# PWD
+# Print Working Directory
 
 ```bash
 $ pwd
 /home/username
 ```
 
----
+----
 
-# LS
+# List
 
-| `ls` | `-a` | (all files)   |
+|  |  | |
 |------|------|---------------|
+| **`ls`** | `-a` | (all files)   |
 |      | `-l` | (long format) |
 |      | `-t` | (by time)     |
 
----
+----
 
 # Change Directory
 
-| `cd PATH` | `.`  | (current DIR) |
+|  |  | |
 |-----------|------|---------------|
+| **`cd PATH`** | `.`  | (current DIR) |
 |           | `..` | (parent DIR)  |
 |           | `~`  | (home DIR)    |
 
-----
+---
 
 # Create your Own
-## Files and Directories
+### Files and Directories
 
----
+----
 
 # Make Directory
 
 ```bash
-mkdir[^mkdir] [OPT] DIR
+mkdir [OPT] DIR
 ```
 
-[mkdir]: `-p` to create parents
+`-p` to create parents
 
----
+----
 
 # Create Empty File
 
@@ -58,8 +60,8 @@ mkdir[^mkdir] [OPT] DIR
 touch FILE
 ```
 
----- 
+---
 
-# APT (Advanced Package Tool)
+# Advanced Package Tool
 
 
