@@ -7,15 +7,13 @@ author:
     - name: Nelson Estevão
       github: nelsonmestevao
       twitter: nelsonmestevao
-date: 15 de outubro, 2018
+date: October 15th, 2018
 keywords: [bash, CeSIUM]
 ---
 
-# Intro
+# What is an IDE? 
 
-## IDE 
-
-Integrated Development Environment
+## Integrated Development Environment
 
 - Source code editor
 - Code completiton
@@ -32,7 +30,7 @@ Integrated Development Environment
 
 - To get you used to unix based systems
 
-### IT'S HARD!
+## IT'S HARD!
 
 - Used to GUIs
 - Like gaming 
@@ -59,13 +57,13 @@ $ pwd
 ```
 ## List
 
-|          |      |                |
-|----------|------|----------------|
-| **`ls`** | `-a` | (all files)    |
-|          | `-l` | (long format)  |
-|          | `-t` | (by time)      |
-|          | `-X` | (by extension) |
-|          | `-S` | (by size)      |
+|          |      |              |
+|----------|------|--------------|
+| **`ls`** | `-a` | all files    |
+|          | `-l` | long format  |
+|          | `-t` | by time      |
+|          | `-X` | by extension |
+|          | `-S` | by size      |
 
 
 <aside class="notes">
@@ -74,11 +72,11 @@ Talk about man
 
 ## Change Directory
 
-|               |      |               |
-|---------------|------|---------------|
-| **`cd PATH`** | `.`  | (current DIR) |
-|               | `..` | (parent DIR)  |
-|               | `~`  | (home DIR)    |
+|               |      |             |
+|---------------|------|-------------|
+| **`cd PATH`** | `.`  | current DIR |
+|               | `..` | parent DIR  |
+|               | `~`  | home DIR    |
 
 
 <aside class="notes">
@@ -103,10 +101,10 @@ $ cd Downloads
 
 ## Make Directory
 
-|             |      |                  |
-|-------------|------|------------------|
-| **`mkdir`** | `-p` | (create parents) |
-|             | `-v` | (verbose)        |
+|             |      |                |
+|-------------|------|----------------|
+| **`mkdir`** | `-p` | create parents |
+|             | `-v` | verbose        |
 
 ```bash
 $ mkdir [OPT] DIR
@@ -119,11 +117,60 @@ $ touch FILE
 ```
 
 
-# Pipes
+# I/O Redirection and pipes
+
+## What 
+
+Redirect output and/or  input.
+
+## Output redirection
+
+
+|          |                     |                                                          |
+|----------|---------------------|----------------------------------------------------------|
+| **`>`**  | `command1 > file1`  | command1 is run and its output will overwrite file1      |
+| **`>>`** | `command1 >> file2` | command1 is run and its output will be appended to file2 |
+
+
+```bash
+$ cat tmp.txt
+ficheiro
+tmp
+$ echo "ola" > tmp.txt
+$ cat tmp.txt
+ola
+$ echo "adeus" >> tmp.txt
+$ cat tmp.txt
+ola
+adeus
+```
+
+## Input redirection
+
+|          |                    |                                         |
+|----------|--------------------|-----------------------------------------|
+| **`<`**  | `command1 < file1` | command1 is run with file1 as its input |
+
+```bash
+$ cat tmp.txt
+ficheiro
+tmp
+$ grep "tmp" < tmp.txt
+tmp
+```
+
+## Pipe operator 
+
+|          |                       |                                                 |
+|----------|-----------------------|-------------------------------------------------|
+| **`|`**  | `command1 | command2` | command2 is run with command1's output as input |
 
 ```bash
 $ ls -al | grep *.hs
 -rw-rw-r--  1 herulume herulume  229 Oct  4 14:11 quicksort.hs
+```
+```bash
+ls -al > temp_file && grep *.hs < temp_file
 ```
 
 # Advanced Package Tool
