@@ -1,5 +1,5 @@
 ---
-title: UNIX Shell, o melhor IDE
+title: UNIX Shell, the best IDE
 author: 
     - name: Eduardo Barbosa 
       github: herulume
@@ -17,7 +17,7 @@ keywords: [bash, CeSIUM]
 
 Integrated Development Environment
 
-- Ssource code editor
+- Source code editor
 - Code completiton
 - Build automation tools
 - Version control system(s) 
@@ -38,6 +38,17 @@ Integrated Development Environment
 - Like gaming 
 - Can't read error messages 
 
+<aside class="notes">
+Gathers all tools in the same place
+GUI apps don't communicate well with each other (no commom interface)
+
+Unix tools share a commom interface (stream of text and files)
+
+Vim vs Emacs (never needing to leave)
+
+IDEs are good, unix just happens to be the best
+</aside>
+
 # Navigation Commands
 
 ## Print Working Directory
@@ -48,11 +59,13 @@ $ pwd
 ```
 ## List
 
-|          |      |               |
-|----------|------|---------------|
-| **`ls`** | `-a` | (all files)   |
-|          | `-l` | (long format) |
-|          | `-t` | (by time)     |
+|          |      |                |
+|----------|------|----------------|
+| **`ls`** | `-a` | (all files)    |
+|          | `-l` | (long format)  |
+|          | `-t` | (by time)      |
+|          | `-X` | (by extension) |
+|          | `-S` | (by size)      |
 
 ## Change Directory
 
