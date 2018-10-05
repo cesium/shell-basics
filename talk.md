@@ -1,9 +1,14 @@
 ---
 title: UNIX Shell, o melhor IDE
 author: 
-    - Eduardo Barbosa 
-    - Nelson Estevão
+    - name: Eduardo Barbosa 
+      github: github
+      twitter: coiso
+    - name: Nelson Estevão
+      github: asdfj
+      twitter: afja
 date: 15 de outubro, 2018
+keywords: [bash, CeSIUM]
 ---
 
 # Navigation Commands
@@ -14,6 +19,13 @@ date: 15 de outubro, 2018
 $ pwd
 /home/username
 ```
+
+<aside class="notes">
+Here are some speaker notes.
+
+This can *contain markdown*.
+</aside>
+
 ## List
 
 |          |      |               |
