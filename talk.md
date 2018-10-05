@@ -1,67 +1,53 @@
 ---
 title: UNIX Shell, o melhor IDE
-authors:
-    - Eduardo Barbosa
+author: 
+    - Eduardo Barbosa 
     - Nelson Estevão
-date: 15 de Outubro
+date: 15 de outubro, 2018
 ---
 
 # Navigation Commands
 
-----
-
-# Print Working Directory
+## Print Working Directory
 
 ```bash
 $ pwd
 /home/username
 ```
+## List
 
-----
-
-# List
-
-|  |  | |
-|------|------|---------------|
+|          |      |               |
+|----------|------|---------------|
 | **`ls`** | `-a` | (all files)   |
-|      | `-l` | (long format) |
-|      | `-t` | (by time)     |
+|          | `-l` | (long format) |
+|          | `-t` | (by time)     |
 
-----
+## Change Directory
 
-# Change Directory
-
-|  |  | |
-|-----------|------|---------------|
+|               |      |               |
+|---------------|------|---------------|
 | **`cd PATH`** | `.`  | (current DIR) |
-|           | `..` | (parent DIR)  |
-|           | `~`  | (home DIR)    |
+|               | `..` | (parent DIR)  |
+|               | `~`  | (home DIR)    |
 
----
 
-# Create your Own
-### Files and Directories
+# Create your own
 
-----
+## Make Directory
 
-# Make Directory
-
-```bash
-mkdir [OPT] DIR
-```
-
-`-p` to create parents
-
-----
-
-# Create Empty File
+|             |      |                  |
+|-------------|------|------------------|
+| **`mkdir`** | `-p` | (create parents) |
+|             | `-v` | (verbose)        |
 
 ```bash
-touch FILE
+$ mkdir [OPT] DIR
 ```
 
----
+## Create Empty File
+
+```bash
+$ touch FILE
+```
 
 # Advanced Package Tool
-
-
