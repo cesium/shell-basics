@@ -67,6 +67,11 @@ $ pwd
 |          | `-X` | (by extension) |
 |          | `-S` | (by size)      |
 
+
+<aside class="notes">
+Talk about man
+</aside>
+
 ## Change Directory
 
 |               |      |               |
@@ -75,6 +80,24 @@ $ pwd
 |               | `..` | (parent DIR)  |
 |               | `~`  | (home DIR)    |
 
+
+<aside class="notes">
+relative paths vs absolute paths
+</aside>
+
+## Relative path vs absolute path
+
+```bash
+cd /home/username/Downloads
+```
+
+```bash
+$ pwd
+/home/username/
+$ ls
+Desktop/ Downloads/ (...)
+$ cd Downloads
+```
 
 # Create your own
 
@@ -93,6 +116,14 @@ $ mkdir [OPT] DIR
 
 ```bash
 $ touch FILE
+```
+
+
+# Pipes
+
+```bash
+$ ls -al | grep *.hs
+-rw-rw-r--  1 herulume herulume  229 Oct  4 14:11 quicksort.hs
 ```
 
 # Advanced Package Tool
