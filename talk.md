@@ -11,6 +11,33 @@ date: 15 de outubro, 2018
 keywords: [bash, CeSIUM]
 ---
 
+# Intro
+
+## IDE 
+
+Integrated Development Environment
+
+- Ssource code editor
+- Code completiton
+- Build automation tools
+- Version control system(s) 
+- Compiler / compiler integration
+- Interpreter 
+- The two above
+- A dragon
+- Mostly bad code
+- Not needed unless coding Java
+
+## Goal
+
+- To get you used to unix based systems
+
+### IT'S HARD!
+
+- Used to GUIs
+- Like gaming 
+- Can't read error messages 
+
 # Navigation Commands
 
 ## Print Working Directory
