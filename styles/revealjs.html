@@ -16,6 +16,7 @@ $endif$
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="js/revealjs/css/reveal.css">
   <style type="text/css">
       code{white-space: pre-wrap;}
@@ -66,13 +67,23 @@ $endfor$
 
 $if(title)$
 <section id="$idprefix$title-slide">
-  <h1 class="title">$title$</h1>
+  <h2 class="title">$title$</h2>
 $if(subtitle)$
   <p class="subtitle">$subtitle$</p>
 $endif$
+$if(author)$
+<div class="authors">
 $for(author)$
+<div class="author">
   <p class="author">$author.name$</p>
+  <div class="social">
+    <a href="https://github.com/$author.github$"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/$author.twitter$"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
 $endfor$
+</div>
+$endif$
 $if(date)$
   <p class="date">$date$</p>
 $endif$

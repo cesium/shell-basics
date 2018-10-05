@@ -7,9 +7,8 @@
 @import "../settings";
 
 // Include theme-specific fonts
-@import url(../../lib/font/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,200i,300,300i,400,400i,600,600i');
 
 /**
  * colors by
@@ -19,32 +18,21 @@ html * {
 	rendering-intent: auto;
 }
 
-// Solarized colors
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
+$base1: #ffffff;
+$base0: #272822;
+$base2: #FD971F;
+$accent: #F92672;
+$accent2: #A6E22E;
+$accent3: #66D9EF;
 
-// Override theme settings (see ../template/settings.scss)
-$mainColor: $base00;
-$headingColor: $base01;
+$mainColor: $base0;
+$headingColor: $base2;
 $headingTextShadow: none;
-$backgroundColor: $base3;
-$linkColor: $blue;
+$headingTextTransform: none;
+$backgroundColor: $base1;
+$linkColor: $accent3;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: $magenta;
+$selectionBackgroundColor: $accent2;
 
 // Background generator
 // @mixin bodyBackground() {
@@ -52,3 +40,31 @@ $selectionBackgroundColor: $magenta;
 // }
 
 @import "../theme";
+
+body {
+    background-image: url(../img/cesium.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: 3% 96%;
+}
+
+.authors {
+    height: 100px;
+    display: inline-block;
+    margin: 40px !important;
+}
+
+.author {
+    float: left;
+    margin: 15px !important;
+}
+
+.social {
+    display: block;
+    a {
+        color: $mainColor;
+        &:hover {
+            color: $accent3;
+        }
+    }
+}

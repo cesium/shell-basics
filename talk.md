@@ -2,11 +2,11 @@
 title: UNIX Shell, o melhor IDE
 author: 
     - name: Eduardo Barbosa 
-      github: github
-      twitter: coiso
+      github: herulume
+      twitter: herulume
     - name: Nelson Estevão
-      github: asdfj
-      twitter: afja
+      github: nelsonmestevao
+      twitter: nelsonmestevao
 date: 15 de outubro, 2018
 keywords: [bash, CeSIUM]
 ---
@@ -19,13 +19,6 @@ keywords: [bash, CeSIUM]
 $ pwd
 /home/username
 ```
-
-<aside class="notes">
-Here are some speaker notes.
-
-This can *contain markdown*.
-</aside>
-
 ## List
 
 |          |      |               |
