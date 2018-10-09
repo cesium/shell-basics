@@ -1,7 +1,7 @@
 ---
 title: UNIX Shell, the best IDE
 author: 
-    - name: Eduardo Barbosa 
+    - name: herulume
       github: herulume
       twitter: herulume
     - name: Nelson Estevão
@@ -30,12 +30,6 @@ keywords: [bash, CeSIUM]
 
 - To get you used to unix based systems
 
-## IT'S HARD!
-
-- Used to GUIs
-- Like gaming 
-- Can't read error messages 
-
 <aside class="notes">
 Gathers all tools in the same place
 GUI apps don't communicate well with each other (no commom interface)
@@ -46,6 +40,13 @@ Vim vs Emacs (never needing to leave)
 
 IDEs are good, unix just happens to be the best
 </aside>
+
+## IT'S HARD!
+
+- Used to GUIs
+- Like gaming
+- Can't read error messages
+
 
 # Navigation Commands
 
@@ -173,4 +174,90 @@ $ ls -al | grep *.hs
 ls -al > temp_file && grep *.hs < temp_file
 ```
 
-# Advanced Package Tool
+# Package Manager
+
+## Advanced Package Tool
+
+## Pacman
+
+## DNF
+
+# GHC / GHCI
+
+# GCC / GDB
+
+## What is gcc
+
+*De facto* C/C++ debugger.
+
+## Instalation
+
+- Ubuntu/Debian based
+```
+sudo apt install gdb
+```
+
+- Arch based
+```
+sudo pacman -Syu
+sudo pacman -S gdb
+```
+
+- Other distros
+```
+Google it
+```
+
+## Compile
+
+```
+gcc -Wall -g -ansi code.c -o program
+```
+
+## Load
+
+```bash
+gdb program
+```
+or
+```bash
+gdb
+(gdb) file program
+```
+
+## Run
+```bash
+(gdb) run
+```
+
+## Breakpoints
+
+```bash
+(gdb) break 20
+```
+or
+```bash
+(gdb) b random.c:20
+```
+or
+```c
+int test(char a, void* c){
+    // code
+  }
+```
+```bash
+(gdb) b test
+```
+
+## Commands
+
+| Command  | Short name  |
+| -------- | ----------- |
+|`break`   | `b`         |
+|`print`   | `p`         |
+|`run`     | `r`         |
+|`next`    | `n`         |
+|`step`    | `s`         |
+|`continue`| `c`         |
+
+# Tmux
