@@ -226,8 +226,15 @@ apt autoremove
 ```bash
 ghc FILE.hs
 ```
-```
+```bash
 ghc -Wall FILE.hs -o li1
 ```
 
 ## GHCI
+
+|        |      |           |
+| -------| -----|-----------|
+|`:type` | `:t` | Type      |
+|`:info` | `:i` | Docs      |
+|`:load` | `:l` | Load file |
+|`:set`  |      | Set confg |
