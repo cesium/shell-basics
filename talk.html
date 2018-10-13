@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="keywords" content="bash, CeSIUM">
+  <title>UNIX Shell, the best IDE</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="js/revealjs/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="css/custom.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'js/revealjs/css/print/pdf.css' : 'js/revealjs/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="js/revealjs/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h2 class="title">UNIX Shell, the best IDE</h2>
+<div class="authors">
+<div class="author">
+  <p class="author">herulume</p>
+  <div class="social">
+    <a href="https://github.com/herulume"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/herulume"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
+<div class="author">
+  <p class="author">Nelson Estevão</p>
+  <div class="social">
+    <a href="https://github.com/nelsonmestevao"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/nelsonmestevao"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
+</div>
+  <p class="date">October 15th, 2018</p>
+</section>
+
+<section><section id="what-is-an-ide" class="titleslide slide level1"><h1>What is an IDE?</h1></section><section id="integrated-development-environment" class="slide level2">
+<h2>Integrated Development Environment</h2>
+<ul>
+<li class="fragment">Source code editor</li>
+<li class="fragment">Code completiton</li>
+<li class="fragment">Build automation tools</li>
+<li class="fragment">Version control system(s)</li>
+<li class="fragment">Compiler / compiler integration</li>
+<li class="fragment">Interpreter</li>
+<li class="fragment">The two above</li>
+<li class="fragment">A dragon</li>
+<li class="fragment">Mostly bad code</li>
+<li class="fragment">Not needed unless coding Java</li>
+</ul>
+</section><section id="goal" class="slide level2">
+<h2>Goal</h2>
+<ul>
+<li class="fragment">To get you used to unix based systems</li>
+</ul>
+<aside class="notes">
+<p>Gathers all tools in the same place GUI apps don't communicate well with each other (no commom interface)</p>
+<p>Unix tools share a commom interface (stream of text and files)</p>
+<p>Vim vs Emacs (never needing to leave)</p>
+IDEs are good, unix just happens to be the best
+</aside>
+</section><section id="its-hard" class="slide level2">
+<h2>IT'S HARD!</h2>
+<ul>
+<li class="fragment">Used to GUIs</li>
+<li class="fragment">Like gaming</li>
+<li class="fragment">Can't read error messages</li>
+</ul>
+</section></section>
+<section><section id="navigation-commands" class="titleslide slide level1"><h1>Navigation Commands</h1></section><section id="print-working-directory" class="slide level2">
+<h2>Print Working Directory</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="bu">pwd</span>
+<span class="ex">/home/username</span></code></pre></div>
+</section><section id="list" class="slide level2">
+<h2>List</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><code>ls</code></strong></td>
+<td><code>-a</code></td>
+<td>all files</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>-l</code></td>
+<td>long format</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>-t</code></td>
+<td>by time</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>-X</code></td>
+<td>by extension</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>-S</code></td>
+<td>by size</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+Talk about man
+</aside>
+</section><section id="change-directory" class="slide level2">
+<h2>Change Directory</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><code>cd PATH</code></strong></td>
+<td><code>.</code></td>
+<td>current DIR</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>..</code></td>
+<td>parent DIR</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><code>~</code></td>
+<td>home DIR</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+relative paths vs absolute paths
+</aside>
+</section><section id="relative-path-vs-absolute-path" class="slide level2">
+<h2>Relative path vs absolute path</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> /home/username/Downloads</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="bu">pwd</span>
+<span class="ex">/home/username/</span>
+$ <span class="fu">ls</span>
+<span class="ex">Desktop/</span> Downloads/ (...)
+$ <span class="bu">cd</span> Downloads</code></pre></div>
+</section></section>
+<section><section id="create-your-own" class="titleslide slide level1"><h1>Create your own</h1></section><section id="make-directory" class="slide level2">
+<h2>Make Directory</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><code>mkdir</code></strong></td>
+<td><code>-p</code></td>
+<td>create parents</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><code>-v</code></td>
+<td>verbose</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">mkdir</span> [OPT] DIR</code></pre></div>
+</section><section id="create-empty-file" class="slide level2">
+<h2>Create Empty File</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">touch</span> FILE</code></pre></div>
+</section></section>
+<section><section id="io-redirection-and-pipes" class="titleslide slide level1"><h1>I/O Redirection and pipes</h1></section><section id="what" class="slide level2">
+<h2>What</h2>
+<p>Redirect output and/or input.</p>
+</section><section id="output-redirection" class="slide level2">
+<h2>Output redirection</h2>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 23%" />
+<col style="width: 64%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong><code>&gt;</code></strong></td>
+<td><code>command1 &gt; file1</code></td>
+<td>command1 is run and its output will overwrite file1</td>
+</tr>
+<tr class="even">
+<td><strong><code>&gt;&gt;</code></strong></td>
+<td><code>command1 &gt;&gt; file2</code></td>
+<td>command1 is run and its output will be appended to file2</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">cat</span> tmp.txt
+<span class="ex">ficheiro</span>
+<span class="ex">tmp</span>
+$ <span class="bu">echo</span> <span class="st">&quot;ola&quot;</span> <span class="op">&gt;</span> tmp.txt
+$ <span class="fu">cat</span> tmp.txt
+<span class="ex">ola</span>
+$ <span class="bu">echo</span> <span class="st">&quot;adeus&quot;</span> <span class="op">&gt;&gt;</span> tmp.txt
+$ <span class="fu">cat</span> tmp.txt
+<span class="ex">ola</span>
+<span class="ex">adeus</span></code></pre></div>
+</section><section id="input-redirection" class="slide level2">
+<h2>Input redirection</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><code>&lt;</code></strong></td>
+<td><code>command1 &lt; file1</code></td>
+<td>command1 is run with file1 as its input</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">cat</span> tmp.txt
+<span class="ex">ficheiro</span>
+<span class="ex">tmp</span>
+$ <span class="fu">grep</span> <span class="st">&quot;tmp&quot;</span> <span class="op">&lt;</span> tmp.txt
+<span class="ex">tmp</span></code></pre></div>
+</section><section id="pipe-operator" class="slide level2">
+<h2>Pipe operator</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><code>|</code></strong></td>
+<td><code>command1 | command2</code></td>
+<td>command2 is run with command1's output as input</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">ls</span> -al <span class="kw">|</span> <span class="fu">grep</span> *.hs
+<span class="ex">-rw-rw-r--</span>  1 herulume herulume  229 Oct  4 14:11 quicksort.hs</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ls</span> -al <span class="op">&gt;</span> temp_file <span class="kw">&amp;&amp;</span> <span class="fu">grep</span> *.hs <span class="op">&lt;</span> temp_file</code></pre></div>
+</section></section>
+<section><section id="package-manager" class="titleslide slide level1"><h1>Package Manager</h1></section><section id="advanced-package-tool" class="slide level2">
+<h2>Advanced Package Tool</h2>
+</section><section id="pacman" class="slide level2">
+<h2>Pacman</h2>
+</section><section id="dnf" class="slide level2">
+<h2>DNF</h2>
+</section></section>
+<section><section id="ghc-ghci" class="titleslide slide level1"><h1>GHC / GHCI</h1></section></section>
+<section><section id="gcc-gdb" class="titleslide slide level1"><h1>GCC / GDB</h1></section><section id="what-is-gcc" class="slide level2">
+<h2>What is gcc</h2>
+<p><em>De facto</em> C/C++ debugger.</p>
+</section><section id="instalation" class="slide level2">
+<h2>Instalation</h2>
+<ul>
+<li class="fragment"><p>Ubuntu/Debian based</p>
+<pre><code>sudo apt install gdb</code></pre></li>
+<li class="fragment"><p>Arch based</p>
+<pre><code>sudo pacman -Syu
+sudo pacman -S gdb</code></pre></li>
+<li class="fragment"><p>Other distros</p>
+<pre><code>Google it</code></pre></li>
+</ul>
+</section><section id="compile" class="slide level2">
+<h2>Compile</h2>
+<pre><code>gcc -Wall -g -ansi code.c -o program</code></pre>
+</section><section id="load" class="slide level2">
+<h2>Load</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">gdb</span> program</code></pre></div>
+<p>or</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">gdb</span>
+<span class="kw">(</span><span class="fu">gdb</span><span class="kw">)</span> <span class="fu">file</span> program</code></pre></div>
+</section><section id="run" class="slide level2">
+<h2>Run</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">(</span><span class="fu">gdb</span><span class="kw">)</span> <span class="ex">run</span></code></pre></div>
+</section><section id="breakpoints" class="slide level2">
+<h2>Breakpoints</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">(</span><span class="fu">gdb</span><span class="kw">)</span> <span class="bu">break</span> 20</code></pre></div>
+<p>or</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">(</span><span class="fu">gdb</span><span class="kw">)</span> <span class="ex">b</span> random.c:20</code></pre></div>
+<p>or</p>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="dt">int</span> test(<span class="dt">char</span> a, <span class="dt">void</span>* c){
+    <span class="co">// code</span>
+  }</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">(</span><span class="fu">gdb</span><span class="kw">)</span> <span class="ex">b</span> test</code></pre></div>
+</section><section id="commands" class="slide level2">
+<h2>Commands</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Short name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>break</code></td>
+<td><code>b</code></td>
+</tr>
+<tr class="even">
+<td><code>print</code></td>
+<td><code>p</code></td>
+</tr>
+<tr class="odd">
+<td><code>run</code></td>
+<td><code>r</code></td>
+</tr>
+<tr class="even">
+<td><code>next</code></td>
+<td><code>n</code></td>
+</tr>
+<tr class="odd">
+<td><code>step</code></td>
+<td><code>s</code></td>
+</tr>
+<tr class="even">
+<td><code>continue</code></td>
+<td><code>c</code></td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section><section id="tmux" class="titleslide slide level1"><h1>Tmux</h1></section></section>
+    </div>
+  </div>
+
+  <script src="js/revealjs/lib/js/head.min.js"></script>
+  <script src="js/revealjs/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        keyboard: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'js/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'js/revealjs/plugin/zoom-js/zoom.js', async: true },
+          { src: 'js/revealjs/socket.io/socker.io.js', async: true },
+          { src: 'js/revealjs/plugin/notes-server/client.js', async: true },
+          { src: 'js/revealjs/plugin/math/math.js', async: true },
+          { src: 'js/revealjs/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

@@ -176,88 +176,58 @@ ls -al > temp_file && grep *.hs < temp_file
 
 # Package Manager
 
+## What are they
+
+Aatomate the process of installing, upgrading, configuring, and removing software
+
 ## Advanced Package Tool
 
-## Pacman
+## Update
 
-## DNF
+```bash
+apt update
+```
+
+## Upgrade
+
+```bash
+apt upgrade
+```
+## Install / Remove
+
+```bash
+apt install PACKAGE
+```
+```bash
+apt remove PACKAGE
+```
+
+## Show updatable
+
+```bash
+apt list --upgradable
+```
+
+## Remove orphans
+
+```bash
+apt autoremove
+```
 
 # GHC / GHCI
 
-# GCC / GDB
+## What are they
 
-## What is gcc
+- The (Glorious)/Glasgow Haskell Compiler
+- The (Glorious)/Glasgow Haskell Compiler Interpreter
 
-*De facto* C/C++ debugger.
-
-## Instalation
-
-- Ubuntu/Debian based
-```
-sudo apt install gdb
-```
-
-- Arch based
-```
-sudo pacman -Syu
-sudo pacman -S gdb
-```
-
-- Other distros
-```
-Google it
-```
-
-## Compile
-
-```
-gcc -Wall -g -ansi code.c -o program
-```
-
-## Load
+## GHC
 
 ```bash
-gdb program
+ghc FILE.hs
 ```
-or
-```bash
-gdb
-(gdb) file program
+```
+ghc -Wall FILE.hs -o li1
 ```
 
-## Run
-```bash
-(gdb) run
-```
-
-## Breakpoints
-
-```bash
-(gdb) break 20
-```
-or
-```bash
-(gdb) b random.c:20
-```
-or
-```c
-int test(char a, void* c){
-    // code
-  }
-```
-```bash
-(gdb) b test
-```
-
-## Commands
-
-| Command  | Short name  |
-| -------- | ----------- |
-|`break`   | `b`         |
-|`print`   | `p`         |
-|`run`     | `r`         |
-|`next`    | `n`         |
-|`step`    | `s`         |
-|`continue`| `c`         |
-
-# Tmux
+## GHCI
