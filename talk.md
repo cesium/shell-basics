@@ -178,7 +178,7 @@ ls -al > temp_file && grep *.hs < temp_file
 
 ## What are they
 
-Aatomate the process of installing, upgrading, configuring, and removing software
+Automate the process of installing, upgrading, configuring, and removing software
 
 ## Advanced Package Tool
 
@@ -202,7 +202,7 @@ apt install PACKAGE
 apt remove PACKAGE
 ```
 
-## Show updatable
+## Show upgradable
 
 ```bash
 apt list --upgradable
