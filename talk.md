@@ -1,7 +1,7 @@
 ---
 title: UNIX Shell, the best IDE
 author: 
-    - name: Eduardo Barbosa 
+    - name: herulume
       github: herulume
       twitter: herulume
     - name: Nelson Estevão
@@ -30,12 +30,6 @@ keywords: [bash, CeSIUM]
 
 - To get you used to unix based systems
 
-## IT'S HARD!
-
-- Used to GUIs
-- Like gaming 
-- Can't read error messages 
-
 <aside class="notes">
 Gathers all tools in the same place
 GUI apps don't communicate well with each other (no commom interface)
@@ -46,6 +40,13 @@ Vim vs Emacs (never needing to leave)
 
 IDEs are good, unix just happens to be the best
 </aside>
+
+## IT'S HARD!
+
+- Used to GUIs
+- Like gaming
+- Can't read error messages
+
 
 # Navigation Commands
 
@@ -173,4 +174,67 @@ $ ls -al | grep *.hs
 ls -al > temp_file && grep *.hs < temp_file
 ```
 
-# Advanced Package Tool
+# Package Manager
+
+## What are they
+
+Automate the process of installing, upgrading, configuring, and removing software
+
+## Advanced Package Tool
+
+## Update
+
+```bash
+apt update
+```
+
+## Upgrade
+
+```bash
+apt upgrade
+```
+## Install / Remove
+
+```bash
+apt install PACKAGE
+```
+```bash
+apt remove PACKAGE
+```
+
+## Show upgradable
+
+```bash
+apt list --upgradable
+```
+
+## Remove orphans
+
+```bash
+apt autoremove
+```
+
+# GHC / GHCI
+
+## What are they
+
+- The (Glorious)/Glasgow Haskell Compiler
+- The (Glorious)/Glasgow Haskell Compiler Interpreter
+
+## GHC
+
+```bash
+ghc FILE.hs
+```
+```bash
+ghc -Wall FILE.hs -o li1
+```
+
+## GHCI
+
+|        |      |           |
+| -------| -----|-----------|
+|`:type` | `:t` | Type      |
+|`:info` | `:i` | Docs      |
+|`:load` | `:l` | Load file |
+|`:set`  |      | Set confg |
