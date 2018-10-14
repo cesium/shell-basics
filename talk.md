@@ -206,10 +206,10 @@ $ rmdir [OPT] DIR
 $ find [OPT] FILE
 ```
 
-|      |                     |
-|------|---------------------|
-| `-name` | Find by name |
-| `-size` | Find by size |
+|          |                       |
+|----------|-----------------------|
+| `-name`  | Find by name          |
+| `-size`  | Find by size          |
 | `-iname` | Case insensitive mode |
 
 ## Print Lines Matching a Pattern
@@ -219,13 +219,13 @@ $ find [OPT] FILE
 $ grep [OPT] FILE
 ```
 
-|      |                     |
-|------|---------------------|
+|      |                                     |
+|------|-------------------------------------|
 | `-c` | Display the number of matched lines |
-| `-i` | Ignore case sensitiviy. |
-| `-l` | Display the filenames |
-| `-n` | Display the line numbers |
-| `-w` | Match whole word |
+| `-i` | Ignore case sensitiviy              |
+| `-l` | Display the filenames               |
+| `-n` | Display the line numbers            |
+| `-w` | Match whole word                    |
 
 # Terminal Key-bindings
 
@@ -279,8 +279,8 @@ Redirect output and/or input.
 
 ## Output redirection
 
-|          |                     |                                                  |
-|----------|---------------------|--------------------------------------------------|
+|          |               |                                                        |
+|----------|---------------|--------------------------------------------------------|
 | **`>`**  | `CMD > FILE`  | CMD is run and its output will overwrite the FILE      |
 | **`>>`** | `CMD >> FILE` | CMD is run and its output will be appended to the FILE |
 
@@ -398,8 +398,8 @@ $ wget [OPT] [URL]
 
 |       |                                                        |
 |-------|--------------------------------------------------------|
-| `-q`  | Quit mode.                                             |
-| `-O`  | Display contents on STDOUT, instead of creating a file. |
+| `-q`  | Quit mode                                              |
+| `-O`  | Display contents on STDOUT, instead of creating a file |
 
 ## cURL
 
@@ -407,11 +407,11 @@ $ wget [OPT] [URL]
 $ curl [OPT] [URL]
 ```
 
-|       |                                                        |
-|-------|--------------------------------------------------------|
-| `-o <file>`  | Write output to <_file_> instead of STDOUT. |
-| `--create-dirs`  | To be used in combination of `-o`.           |
-| `-s` | Silent or quiet mode. Don't show progress meter or error messages. |
+|       |                                                                             |
+|-------|-----------------------------------------------------------------------------|
+| `-o <file>`     | Write output to <_file_> instead of STDOUT                        |
+| `--create-dirs` | To be used in combination of `-o`                                 |
+| `-s`            | Silent or quiet mode. Don't show progress meter or error messages |
 
 # GHC / GHCI
 
@@ -433,7 +433,7 @@ ghc -Wall FILE.hs -o li1
 ## GHCI
 
 |        |      |           |
-| -------| -----|-----------|
+| -------|------|-----------|
 |`:type` | `:t` | Type      |
 |`:info` | `:i` | Docs      |
 |`:load` | `:l` | Load file |
