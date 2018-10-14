@@ -5,7 +5,7 @@ all: slides css
 
 slides: $(SRC:.md=.html)
 
-%.html: %.md 
+%.html: %.md
 	pandoc -i $< -t revealjs --template styles/revealjs.html --slide-level=2 -V theme=$(THEME) -o $@
 
 css/$(THEME).css: styles/themes/$(THEME).scss
