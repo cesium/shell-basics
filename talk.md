@@ -22,7 +22,7 @@ keywords: [bash, CeSIUM]
 - Compiler / compiler integration
 - Interpreter
 - The two above
-- A dragon
+- An unicorn
 - Mostly bad code
 - Not needed unless coding Java
 
@@ -442,3 +442,19 @@ ghc -Wall FILE.hs -o li1
 
 # Questions?
 
+<aside class="notes">
+* screenfetch vs neofetch
+* sl
+* lolcat
+* cowsay
+* cowthink
+* tmux
+* git
+* top vs htop
+* ranger
+* vim vs neovim
+* setxkbmap
+* numlockx
+* xrandr
+* redshift
+</aside>
